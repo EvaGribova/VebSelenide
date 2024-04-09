@@ -50,8 +50,6 @@ public class Tests {
 
         open("http://localhost:9999/");
         SelenideElement form = $(".form");
-        form.$("[data-test-id=name] input").setValue("");
-        form.$("[data-test-id=phone] input").setValue("");
         form.$(".button__content").click();
         $("[data-test-id=name].input").shouldHave(text("Поле обязательно для заполнения"));
         form.$("[data-test-id=name] input").setValue("Мария Иванова");
