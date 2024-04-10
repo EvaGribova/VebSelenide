@@ -62,7 +62,7 @@ public class Tests {
         form.$("[data-test-id=name] input").setValue("Мария Иванова");
         form.$("[data-test-id=phone] input").setValue("+79999991111");
         form.$(".button__content").click();
-        $("[data-test-id=agreement]").should(visible);
+        $("[data-test-id=agreement].input_invalid").should(visible);
     }
 
     @Test
